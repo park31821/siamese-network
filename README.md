@@ -1,6 +1,6 @@
 # Siamese network implementation for one-shot learning
 
-Siamese network became more popular for tasks that involve finding similarity or learning equivalence relations between objects since it requires a small amount of data for training. Siamese neural network contains two or more identical sub-networks with shared weights followed by a distance calculation layer. The vectors of input images produced by the network will be used to calculate the distance between the images to the model and learn by optimizing the loss function. This project will build two different Siamese networks using different loss functions, contrastive loss and triplet loss, on the Omniglot dataset.
+Siamese network became more popular for tasks that involve finding similarity or learning equivalence relations between objects since it requires a small amount of data for training. Siamese neural network contains two or more identical sub-networks with shared weights followed by a distance calculation layer. The vectors of input images produced by the network will be used to calculate the distance between the images to the model and learn by optimizing the loss function. This project will build two different Siamese networks using different loss functions, contrastive loss and triplet loss, on the Omniglot dataset and compare their performance and generalisation capability.
 
 ## Loss functions
 
