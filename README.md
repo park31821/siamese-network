@@ -36,17 +36,25 @@ Siamese network models were trained and their performance were evaluated using t
     
 ## Results
 
+### Constrastive loss function 
+
 ![스크린샷 2022-03-21 오후 12 59 05](https://user-images.githubusercontent.com/74476122/159199727-5a1bf227-cf54-4fd4-b9f9-f01842f2e4f4.png)
 
-The graph above is model accuracy and loss when constrastive loss function was used, the batch size was 128 and the number of epochs were 15.
+The batch size was 128 and the number of epochs were 15.
+
+### Triplet loss function 
 
 ![스크린샷 2022-03-21 오후 1 03 45](https://user-images.githubusercontent.com/74476122/159200038-aef3c2ac-1310-44d1-bc5a-5d8299b4a757.png)
 
-The graph above is model accuracy and loss when triplet loss function was used, the batch size was 128 and the number of epochs were 20.
+The batch size was 128 and the number of epochs were 20.
 
 ### Accuracy comparison of Siamese networks using contrastive loss function and triplet loss function
 
 ![스크린샷 2022-03-21 오후 1 04 53](https://user-images.githubusercontent.com/74476122/159200113-81fc1cb3-1958-49a1-9e4b-8ac955e4087e.png)
+
+## Generalisation capability of Siamese network
+
+One of the main advantages of the Siamese network is that we do not need to know the number of classes before building the model. The similarity of images is calculated based on their distance; hence, the network is generalised, and there is no further training required if the data is fluid. The results show that it could still identify the similarity of images with an accuracy of approximately 67% when the model was tested on the test split. The test split of the dataset contained alphabet classes from 41 to 50, which were not included in the training process. Therefore, it shows that the Siamese network can learn discriminative features of images without training the whole dataset and still generalise the network.
 
 
 
