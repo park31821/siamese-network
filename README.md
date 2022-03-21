@@ -1,4 +1,4 @@
-# Siamese network model for image similarity check
+# Siamese network implementation for one-shot learning
 
 Siamese network became more popular for tasks that involve finding similarity or learning equivalence relations between objects since it requires a small amount of data for training. Siamese neural network contains two or more identical sub-networks with shared weights followed by a distance calculation layer. The vectors of input images produced by the network will be used to calculate the distance between the images to the model and learn by optimizing the loss function. This project will build two different Siamese networks using different loss functions, contrastive loss and triplet loss, on the Omniglot dataset.
 
@@ -17,4 +17,38 @@ The equation above is the contrastive loss function where Pi and Pj are input im
 <img width="671" alt="스크린샷 2022-03-20 오후 10 24 18" src="https://user-images.githubusercontent.com/74476122/159162002-51309ad3-1559-4ed3-8657-4e4922a9a20a.png">
 
 The equation above is the triplet loss function, where ![anchor](https://latex.codecogs.com/svg.image?f(x_{i}^{a})), ![positive](https://latex.codecogs.com/svg.image?f(x_{i}^{p})), ![negative](https://latex.codecogs.com/svg.image?f(x_{i}^{n})) represent vector representation of anchor, positive and negative images respectively, and 𝛼 is margin.
+
+The triplet loss function takes three network inputs: anchor, positive, and negative. Anchor is an input to be compared, positive is an input belonging to the same class as the anchor, and negative is input in a different class from the anchor. The function's main purpose is to minimise the distance between the anchor and positive while maximising the distance between anchor and negative by using margin.
+
+## Dataset
+
+[Omniglot dataset](https://github.com/brendenlake/omniglot#:~:text=The%20Omniglot%20data%20set%20is,Turk%20by%2020%20different%20people.) from `tensorflow_datasets`
+
+## Methods
+
+Siamese network models were trained and their performance were evaluated using three different datasets:
+1. Training split (Dataset 1)
+    - Alphabet class (0~40)
+2. Test split (Dataset 2)
+    - Alphabet class (41~50)
+3. Training and test split combined (Dataset 3)
+    - Alphabet class (0~50)
+    
+## Results
+
+![스크린샷 2022-03-21 오후 12 59 05](https://user-images.githubusercontent.com/74476122/159199727-5a1bf227-cf54-4fd4-b9f9-f01842f2e4f4.png)
+
+The graph above is model accuracy and loss when constrastive loss function was used, the batch size was 128 and the number of epochs were 15.
+
+![스크린샷 2022-03-21 오후 1 03 45](https://user-images.githubusercontent.com/74476122/159200038-aef3c2ac-1310-44d1-bc5a-5d8299b4a757.png)
+
+The graph above is model accuracy and loss when triplet loss function was used, the batch size was 128 and the number of epochs were 20.
+
+### Accuracy comparison of Siamese networks using contrastive loss function and triplet loss function
+
+![스크린샷 2022-03-21 오후 1 04 53](https://user-images.githubusercontent.com/74476122/159200113-81fc1cb3-1958-49a1-9e4b-8ac955e4087e.png)
+
+
+
+
 
