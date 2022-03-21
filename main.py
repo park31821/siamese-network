@@ -165,8 +165,7 @@ def train_and_test_siamese_network(set_type):
   
 
 if __name__ == '__main__':
-    a,b,c,d,e = load_dataset()
-    x,y = get_sets(32, a, "triplet")
-    print(x.shape, y.shape)
+    
     # train_and_test_siamese_network("triplet")
+    # train_and_test_siamese_network("pair")
 
