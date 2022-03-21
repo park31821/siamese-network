@@ -40,13 +40,13 @@ Siamese network models were trained and their performance were evaluated using t
 
 ![스크린샷 2022-03-21 오후 12 59 05](https://user-images.githubusercontent.com/74476122/159199727-5a1bf227-cf54-4fd4-b9f9-f01842f2e4f4.png)
 
-The batch size was 128 and the number of epochs were 15.
+The batch size was 128 and the number of epochs was 15.
 
 ### Triplet loss function 
 
 ![스크린샷 2022-03-21 오후 1 03 45](https://user-images.githubusercontent.com/74476122/159200038-aef3c2ac-1310-44d1-bc5a-5d8299b4a757.png)
 
-The batch size was 128 and the number of epochs were 20.
+The batch size was 128 and the number of epochs was 20.
 
 ### Accuracy comparison of Siamese networks using contrastive loss function and triplet loss function
 
